@@ -1,6 +1,6 @@
 
-set version_url "https://raw.githubusercontent.com/thkl/HM-SoundTouch/master/VERSION"
-set package_url "https://github.com/thkl/HM-SoundTouch/raw/master/hm-soundtouch.tar.gz"
+set version_url "https://raw.githubusercontent.com/juelo/HM-SoundTouch/master/VERSION"
+set package_url "https://github.com/juelo/HM-SoundTouch/raw/master/hm-soundtouch.tar.gz"
 
 set cmd ""
 if {[info exists env(QUERY_STRING)]} {
