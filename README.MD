@@ -1,8 +1,25 @@
+Alles abgeleitet aus 
+https://github.com/thkl/HM-SoundTouch
+Danke!!!
+
+Die Installation funktioniert auf CCU2 und CCU3 und das AddOn läuft bei mir ohne Probleme.
+
+Known issues:
+Aktuell wird noch kein Symbol in der Systemsteuerung erstellt.
+Die Deinstallation zeigt Fehlermeldung, wird aber scheinbar durchgeführt (muss ich noch genau prüfen)
+
+Somit alles auf eigene Gefahr ;-)
+
+
 A simple tcl wrapper to control your Bose SoundTouch devices.
 
-Install this https://github.com/thkl/HM-SoundTouch/raw/master/hm-soundtouch.tar.gz at your ccu and reboot.
+Changes have been made because of firmware update of ccu
 
-_Please note: after the update from 0.0.10 to 0.0.11 you have to add your players again to the system._
+	update:
+	https://github.com/juelo/HM-SoundTouch
+
+Install this hm-soundtouch.tar.gz at your ccu and reboot.
+
 
 Then there is a small readme at http://ccuip/addons/soundtouch/. You may control your SoundTouch devices via system.Exec("/usr/local/addons/soundtouch/state.tcl NAME COMMAND ARGUMENT")
 ... but please see the readme ...
