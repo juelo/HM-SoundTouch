@@ -42,8 +42,8 @@ chown -R root:root ${ADDON_DIR}/*
 chmod +x ${ADDON_DIR}/state.tcl
 chmod +x ${ADDON_DIR}/add.tcl
 chmod +x ${ADDON_DIR}/stated.tcl
-chmod +x ${ADDON_DIR}/update_addon
-
+#wird später benötigt, durch plattformabhängiges Kopieren
+#chmod +x ${ADDON_DIR}/update_addon
 
 echo "restore config file" >>$LOG_FILE
 [ -e "/tmp/${ADDON_NAME}.conf" ] && mv "/tmp/${ADDON_NAME}.conf" "${ADDON_DIR}/etc/${ADDON_NAME}.conf"
@@ -71,6 +71,9 @@ elif [ "$1" == "HM-RASPBERRYMATIC" ]; then
     cp -af ccu3/* ${ADDON_DIR}/
   fi
 fi
+
+# kopiertes update_addon ausführbar machen
+chmod +x ${ADDON_DIR}/update_addon
 
 
 echo "link www files" >>$LOG_FILE
