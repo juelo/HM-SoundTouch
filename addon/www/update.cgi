@@ -1,13 +1,30 @@
+#!/bin/tclsh
 
-set version_url "https://raw.githubusercontent.com/juelo/HM-SoundTouch/master/VERSION"
-set package_url "https://github.com/juelo/HM-SoundTouch/raw/master/hm-soundtouch.tar.gz"
+set checkURL    "https://raw.githubusercontent.com/juelo/HM-SoundTouch/master/VERSION"
+set downloadURL "https://github.com/juelo/HM-SoundTouch/releases/latest"
 
-set cmd ""
-if {[info exists env(QUERY_STRING)]} {
-	regexp {cmd=([^&]+)} $env(QUERY_STRING) match cmd
+catch {
+  set input $env(QUERY_STRING)
+  set pairs [split $input &]
+  foreach pair $pairs {
+    if {$pair == "cmd=download"} {
+      set cmd "download"
+      break
+    }
+  }
 }
-if {$cmd == "download"} {
-	puts "<html><head><meta http-equiv=\"refresh\" content=\"0; url=${package_url}\" /></head></html>"
+
+if { [info exists cmd ] && $cmd == "download"} {
+  puts -nonewline "Content-Type: text/html; charset=utf-8\r\n\r\n"
+  puts -nonewline "<html><head><meta http-equiv='refresh' content='0; url=$downloadURL' /></head><body></body></html>"
 } else {
-	puts [exec /usr/bin/wget -q --no-check-certificate -O- "${version_url}"]
+  puts -nonewline "Content-Type: text/plain; charset=utf-8\r\n\r\n"
+  catch {
+    set newversion [ exec /usr/bin/wget -qO- --no-check-certificate $checkURL ]
+  }
+  if { [info exists newversion] } {
+    puts $newversion
+  } else {
+    puts "n/a"
+  }
 }
