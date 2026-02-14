@@ -5,9 +5,6 @@ Danke!!!
 Die Installation funktioniert auf CCU2 und CCU3 und das AddOn läuft bei mir ohne Probleme.
 Kann auch auf anderen Plattformen laufen, konnte ich aber nicht testen.
 
-Known issues:
-Deinstallation läuft, alle Dateien werden gelöscht, bis auf die config-Datei
-
 Somit alles auf eigene Gefahr ;-)
 
 
