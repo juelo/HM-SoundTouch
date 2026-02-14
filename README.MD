@@ -3,10 +3,10 @@ https://github.com/thkl/HM-SoundTouch
 Danke!!!
 
 Die Installation funktioniert auf CCU2 und CCU3 und das AddOn läuft bei mir ohne Probleme.
+Kann auch auf anderen Plattformen laufen, konnte ich aber nicht testen.
 
 Known issues:
-Aktuell wird noch kein Symbol in der Systemsteuerung erstellt.
-Die Deinstallation zeigt Fehlermeldung, wird aber scheinbar durchgeführt (muss ich noch genau prüfen)
+Deinstallation läuft, alle Dateien werden gelöscht, bis auf die config-Datei
 
 Somit alles auf eigene Gefahr ;-)
 
