@@ -1,5 +1,7 @@
 #!/bin/sh -e
 
+# this file is not updated, do not use for creation of tar.gz file
+
 version=$(cat VERSION)
 addon_file="$(pwd)/hm-soundtouch.tar.gz"
 tmp_dir=$(mktemp -d)
